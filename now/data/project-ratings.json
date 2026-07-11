@@ -1,0 +1,72 @@
+{
+  "calgpa": {
+    "count": 1,
+    "sum": 4,
+    "starCounts": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "zephra": {
+    "count": 0,
+    "sum": 0,
+    "starCounts": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "aether": {
+    "count": 0,
+    "sum": 0,
+    "starCounts": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "miniminds": {
+    "count": 2,
+    "sum": 6,
+    "starCounts": [
+      0,
+      1,
+      0,
+      1
+    ]
+  },
+  "carsio": {
+    "count": 1,
+    "sum": 4,
+    "starCounts": [
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "roledoc": {
+    "count": 0,
+    "sum": 0,
+    "starCounts": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "textotest": {
+    "count": 0,
+    "sum": 0,
+    "starCounts": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
