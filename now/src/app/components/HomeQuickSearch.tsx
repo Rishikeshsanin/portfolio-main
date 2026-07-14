@@ -18,9 +18,9 @@ const MAX_DYNAMIC_ENTRIES = 320;
 const searchIndex: SearchEntry[] = [
   {
     label: "Home Hero",
-    context: "Hi I am Karthikeya DevOps and SNow Developer",
+    context: "Hi I am Rishikesh DevOps and SNow Developer",
     href: "/#hero",
-    keywords: ["home", "karthikeya", "devops", "snow", "servicenow", "hero", "intro", "developer"],
+    keywords: ["home", "rishikesh", "devops", "snow", "servicenow", "hero", "intro", "developer"],
   },
   {
     label: "About Profile",
@@ -102,9 +102,9 @@ const searchIndex: SearchEntry[] = [
   },
   {
     label: "Contact Email",
-    context: "alurubalakarthikeya gmail com",
+    context: "rishikesh gmail com",
     href: "/contact#contact",
-    keywords: ["alurubalakarthikeya", "gmail", "alurubalakarthikeya@gmail.com", "primary channel"],
+    keywords: ["rishikesh", "gmail", "rishikesh@gmail.com", "primary channel"],
   },
 ];
 
