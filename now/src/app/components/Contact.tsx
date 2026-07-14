@@ -149,7 +149,7 @@ export default function Contact() {
                                     <span className="material-symbols-outlined text-[1.1rem]">arrow_outward</span>
                                 </a>
                                 <a
-                                    href="/resume.pdf"
+                                    href="/rishi-resume.pdf"
                                     download="Rishikesh-Resume.pdf"
                                     className="inline-flex items-center justify-center gap-2 rounded-full border border-[#10b981]/35 bg-white/70 px-5 py-3 text-sm md:text-base font-extrabold tracking-[0.08em] uppercase text-[#047857] shadow-[0_8px_18px_rgba(6,95,70,0.1)] hover:-translate-y-0.5 hover:bg-white/90 transition-all"
                                 >

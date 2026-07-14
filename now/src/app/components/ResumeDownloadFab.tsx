@@ -31,8 +31,8 @@ export default function ResumeDownloadFab() {
     }
 
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.setAttribute("download", "Aluru-Bala-Rishikesh-Resume.pdf");
+  link.href = "/rishi-resume.pdf";
+  link.setAttribute("download", "Rishikesh-Resume.pdf");
     document.body.appendChild(link);
     link.click();
     link.remove();
