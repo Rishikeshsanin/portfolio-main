@@ -19,10 +19,10 @@ const doto = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Karthikeya | Home",
-    template: "Karthikeya | %s",
+    default: "Rishikesh | Home",
+    template: "Rishikesh | %s",
   },
-  description: "Portfolio of Bala Karthikeya, Full Stack & AI Developer",
+  description: "Portfolio of Rishikesh, Full Stack & AI Developer",
   icons: {
     icon: logo.src,
     shortcut: logo.src,
