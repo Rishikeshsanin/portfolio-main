@@ -14,10 +14,16 @@
   --site-accent-hover:#059669;
   --site-accent-soft:rgba(16,185,129,.10);
   --site-accent-ghost:rgba(16,185,129,.15);
+  --site-canvas-fill:#081b3a;
+  --site-canvas-grid:rgba(4,15,36,.28);
+  --site-overlay:rgba(4,15,36,.6);
   --site-scroll-track:#081b3a;
+  --site-scroll-thumb:linear-gradient(180deg,#10b981 0%,#059669 100%);
+  --site-scroll-thumb-hover:linear-gradient(180deg,#059669 0%,#047857 100%);
   --site-card-bg:rgba(13,42,84,.25);
   --site-card-bg-strong:rgba(8,27,58,.5);
   --site-card-bg-accent:rgba(16,185,129,.15);
+  --site-terminal-bg:rgba(8,27,58,.85);
   --site-highlight:rgba(16,185,129,.26);
   --text-primary:#f1f5f9;
   --text-secondary:#cbd5e1;
@@ -33,7 +39,7 @@ html[data-theme="light"] {
   --site-muted:#047857;
   --site-muted-strong:#065f46;
   --site-surface:rgba(255,255,255,.45);
-  --site-surface-strong:rgba(255,255,255,.62);
+  --site-surface-strong:rgba(255,255,255,.55);
   --site-surface-soft:rgba(255,255,255,.35);
   --site-border:rgba(6,95,70,.15);
   --site-border-strong:rgba(6,95,70,.25);
@@ -41,10 +47,16 @@ html[data-theme="light"] {
   --site-accent-hover:#059669;
   --site-accent-soft:rgba(16,185,129,.08);
   --site-accent-ghost:rgba(16,185,129,.14);
+  --site-canvas-fill:#d1fae5;
+  --site-canvas-grid:rgba(6,76,57,.12);
+  --site-overlay:rgba(255,255,255,.55);
   --site-scroll-track:#d1fae5;
+  --site-scroll-thumb:linear-gradient(180deg,#10b981 0%,#059669 100%);
+  --site-scroll-thumb-hover:linear-gradient(180deg,#059669 0%,#047857 100%);
   --site-card-bg:rgba(255,255,255,.4);
-  --site-card-bg-strong:rgba(255,255,255,.52);
+  --site-card-bg-strong:rgba(255,255,255,.5);
   --site-card-bg-accent:rgba(16,185,129,.08);
+  --site-terminal-bg:rgba(255,255,255,.65);
   --site-highlight:rgba(16,185,129,.18);
   --text-primary:#064c39;
   --text-secondary:#047857;
@@ -64,7 +76,7 @@ body{margin:0;background:var(--site-background);color:var(--site-foreground);fon
 *,*::before,*::after{box-sizing:border-box;transition-property:background-color,color,border-color,box-shadow;transition-duration:250ms;transition-timing-function:ease}
 a,button,[role="button"]{cursor:url('/cursor/cursor-tri-21.png') 1 1,pointer}
 *{scrollbar-width:thin;scrollbar-color:#10b981 var(--site-scroll-track)}
-*::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-track{background:var(--site-scroll-track)}*::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#10b981,#059669);border:2px solid var(--site-scroll-track);border-radius:999px}
+*::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-track{background:var(--site-scroll-track)}*::-webkit-scrollbar-thumb{background:var(--site-scroll-thumb);border:2px solid var(--site-scroll-track);border-radius:999px}*::-webkit-scrollbar-thumb:hover{background:var(--site-scroll-thumb-hover)}
 .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
 .font-doto{font-family:var(--font-doto),'Plus Jakarta Sans',sans-serif}.rubber-spin-dot{display:inline-block;transform-origin:50% 50%;animation:rubber-spin 3.4s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform}
 .site-search-highlight{background:var(--site-highlight);border-radius:.18rem;padding:0 .08rem}
