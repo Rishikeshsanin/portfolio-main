@@ -8,9 +8,21 @@ import rishiPhoto from "../assets/imgs/rishi.jpeg";
 const githubUsername = "Rishikeshsanin";
 
 const experience = [
-  { date: "May 2026 – Jul 2026", title: "Assistant Teaching Faculty Intern · RICON Technologies", blurb: "Supported C and Python theory/lab sessions, prepared programming exercises and mentored students through debugging and core programming concepts." },
-  { date: "Jun 2024 – Jul 2024", title: "Cybersecurity Intern · Dhee Data Center", blurb: "Built a Python malware-detection workflow with preprocessing and feature engineering, then evaluated Random Forest, SVM and XGBoost models." },
-  { date: "2025", title: "Co-Founder · Mew Thetis", blurb: "Presented Socio Drift, an AI-powered music-generation platform, as a Karnataka Elevate 2025 finalist." },
+  {
+    date: "May 2026 – Jul 2026",
+    title: "Assistant Teaching Faculty Intern · RICON Technologies",
+    blurb: "Supported C and Python theory/lab sessions, prepared programming exercises and mentored students through debugging and core programming concepts.",
+  },
+  {
+    date: "Jun 2024 – Jul 2024",
+    title: "Cybersecurity Intern · Dhee Data Center",
+    blurb: "Built a Python malware-detection workflow with preprocessing and feature engineering, then evaluated Random Forest, SVM and XGBoost models.",
+  },
+  {
+    date: "2025",
+    title: "Co-Founder · Mew Thetis",
+    blurb: "Presented Socio Drift, an AI-powered music-generation platform, as a Karnataka Elevate 2025 finalist.",
+  },
 ];
 
 const loopTitles = [
@@ -54,10 +66,10 @@ const coreStack = [
 type Contribution = { date: string; count: number; level: number };
 
 export default function About() {
-  const [repoCount, setRepoCount] = useState<string>("—");
-  const [starCount, setStarCount] = useState<string>("—");
+  const [repoCount, setRepoCount] = useState("—");
+  const [starCount, setStarCount] = useState("—");
   const [contributions, setContributions] = useState<Contribution[]>([]);
-  const [contributionTotal, setContributionTotal] = useState<string>("—");
+  const [contributionTotal, setContributionTotal] = useState("—");
 
   useEffect(() => {
     async function loadGitHub() {
@@ -78,7 +90,7 @@ export default function About() {
           setStarCount(String(stars));
         }
       } catch {
-        // The cards retain neutral fallbacks if GitHub rate-limits a visitor.
+        // Keep neutral fallbacks if GitHub rate-limits the visitor.
       }
 
       try {
@@ -91,7 +103,7 @@ export default function About() {
           setContributionTotal(String(total));
         }
       } catch {
-        // Graph gracefully falls back to an empty grid and direct GitHub link.
+        // The graph remains visible with empty cells if the public API is unavailable.
       }
     }
 
@@ -121,22 +133,37 @@ export default function About() {
   return (
     <section id="about" className="relative w-full min-h-screen pb-16 overflow-hidden">
       <div className="relative px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12 md:mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12 md:mb-14"
+        >
           <h1 className="mt-5 text-4xl sm:text-5xl md:text-7xl font-extrabold font-headline font-doto text-[var(--text-heading)] tracking-tight leading-[0.95]">
-            Building Products, <br />With Curiosity<span className="font-doto rubber-spin-dot inline-flex text-[#10b981] ml-1">+</span>
+            Building Products, <br />With Curiosity
+            <span className="font-doto rubber-spin-dot inline-flex text-[#10b981] ml-1">+</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-[var(--text-secondary)] font-medium max-w-3xl mx-auto">
             Final-year CSE (AI & ML) student at RV University, focused on software engineering, backend systems and applied AI.
           </p>
           <div className="mt-6 flex justify-center">
-            <a href="/rishi-resume.pdf" download="Rishikesh-Munnaluri-Resume.pdf" className="group inline-flex items-center gap-2 rounded-full border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] px-6 py-3 text-sm md:text-base font-extrabold tracking-[0.08em] uppercase text-[#10b981] shadow-[0_10px_24px_rgba(16,185,129,0.08)] backdrop-blur-md hover:shadow-[0_14px_32px_rgba(16,185,129,0.15)] transition-all">
+            <a
+              href="/rishi-resume.pdf"
+              download="Rishikesh-Munnaluri-Resume.pdf"
+              className="group inline-flex items-center gap-2 rounded-full border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] px-6 py-3 text-sm md:text-base font-extrabold tracking-[0.08em] uppercase text-[#10b981] shadow-[0_10px_24px_rgba(16,185,129,0.08)] backdrop-blur-md hover:shadow-[0_14px_32px_rgba(16,185,129,0.15)] transition-all"
+            >
               Download Resume <span className="material-symbols-outlined text-base">download</span>
             </a>
           </div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-10">
-          <motion.aside initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-5 rounded-[2.6rem] border border-[#10b981]/20 bg-[var(--site-card-bg-accent)] backdrop-blur-xl p-7 md:p-9 shadow-[0_24px_64px_rgba(0,0,0,0.12)] relative overflow-hidden">
+          <motion.aside
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-5 rounded-[2.6rem] border border-[#10b981]/20 bg-[var(--site-card-bg-accent)] backdrop-blur-xl p-7 md:p-9 shadow-[0_24px_64px_rgba(0,0,0,0.12)] relative overflow-hidden"
+          >
             <div className="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-[#10b981]/10 blur-2xl" />
             <div className="relative z-10 flex items-start gap-4">
               <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-2xl border border-[#10b981]/25 overflow-hidden shadow-[0_14px_24px_rgba(0,0,0,0.15)] shrink-0">
@@ -153,12 +180,19 @@ export default function About() {
             </p>
             <div className="relative z-10 mt-6 flex flex-wrap gap-2.5">
               {["Backend Systems", "Applied AI", "Realtime Apps", "Product Engineering", "Full Stack"].map((chip) => (
-                <span key={chip} className="rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.08em] uppercase border border-[#10b981]/25 bg-[#10b981]/10 text-[#10b981]">{chip}</span>
+                <span key={chip} className="rounded-full px-3 py-1.5 text-xs font-bold tracking-[0.08em] uppercase border border-[#10b981]/25 bg-[#10b981]/10 text-[#10b981]">
+                  {chip}
+                </span>
               ))}
             </div>
           </motion.aside>
 
-          <motion.article initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]">
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-7 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]"
+          >
             <p className="inline-flex px-4 py-1.5 rounded-full text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981] bg-[#10b981]/10 border border-[#10b981]/20">Experience</p>
             <div className="mt-6 space-y-6">
               {experience.map((item) => (
@@ -173,10 +207,43 @@ export default function About() {
           </motion.article>
         </div>
 
-        <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-8 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-6 md:p-8 shadow-[0_20px_56px_rgba(16,185,129,0.06)]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
+        >
+          <article className="rounded-[2.4rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]">
+            <p className="text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981]">Education</p>
+            <h3 className="mt-4 text-2xl md:text-3xl font-black text-[var(--text-heading)]">RV University</h3>
+            <p className="mt-2 text-base font-bold text-[var(--text-secondary)]">B.Tech (Hons) Computer Science & Engineering — AI & ML</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full px-3 py-1.5 text-xs font-bold border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] text-[#10b981]">2023 – 2027</span>
+              <span className="rounded-full px-3 py-1.5 text-xs font-bold border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] text-[#10b981]">Bengaluru</span>
+            </div>
+          </article>
+
+          <article className="rounded-[2.4rem] border border-[#10b981]/20 bg-[var(--site-card-bg-accent)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.06)]">
+            <p className="text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981]">Selected Achievement</p>
+            <h3 className="mt-4 text-2xl md:text-3xl font-black text-[var(--text-heading)]">Karnataka Elevate 2025 Finalist</h3>
+            <p className="mt-3 text-sm md:text-base leading-relaxed font-medium text-[var(--text-secondary)]">Presented Socio Drift through Mew Thetis as an AI-powered music-generation startup project.</p>
+          </article>
+        </motion.div>
+
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-8 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-6 md:p-8 shadow-[0_20px_56px_rgba(16,185,129,0.06)]"
+        >
           <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
             <p className="text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981]">GitHub Graph</p>
-            <a href={`https://github.com/${githubUsername}`} target="_blank" rel="noreferrer" className="rounded-full border border-[#10b981]/20 bg-[#10b981]/10 px-4 py-1.5 text-xs md:text-sm font-extrabold tracking-[0.08em] uppercase text-[#10b981] hover:bg-[#10b981]/15">
+            <a
+              href={`https://github.com/${githubUsername}`}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-[#10b981]/20 bg-[#10b981]/10 px-4 py-1.5 text-xs md:text-sm font-extrabold tracking-[0.08em] uppercase text-[#10b981] hover:bg-[#10b981]/15"
+            >
               @{githubUsername}
             </a>
           </div>
@@ -224,64 +291,64 @@ export default function About() {
       </div>
 
       <div className="relative px-6 md:px-12 w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 mb-10 items-start">
-          <motion.article initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-7 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.06)]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-7 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]"
+          >
             <p className="inline-flex px-4 py-1.5 rounded-full text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981] bg-[#10b981]/10 border border-[#10b981]/20">Product Stats</p>
             <h3 className="mt-5 text-3xl md:text-5xl font-extrabold font-doto text-[var(--text-heading)] leading-[1.04]">
-              Products that ship, <br />not just demos.
+              Products I can demo, <br />explain and improve.
             </h3>
             <p className="mt-4 text-base md:text-lg text-[var(--text-secondary)] max-w-2xl leading-relaxed font-medium">
-              I like taking ideas through the uncomfortable parts too — integration, debugging, deployment, reliability and iteration after the first version works.
+              I care more about shipping usable software and understanding the engineering decisions behind it than collecting decorative technology badges.
             </p>
 
             <div className="mt-7 grid grid-cols-2 gap-3 md:gap-4">
               {stats.map((item) => (
                 <div key={item.label} className="rounded-2xl border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] px-4 py-4 shadow-sm">
-                  <p className="text-[10px] md:text-[11px] tracking-[0.14em] uppercase text-[#10b981] font-bold">{item.label}</p>
+                  <p className="text-[11px] tracking-[0.14em] uppercase text-[#10b981] font-bold">{item.label}</p>
                   <p className="mt-1 text-xl md:text-2xl font-black text-[var(--text-card)]">{item.value}</p>
                 </div>
               ))}
             </div>
           </motion.article>
 
-          <motion.article initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="lg:col-span-5 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.06)]">
+          <motion.article
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-5 rounded-[2.6rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]"
+          >
             <h3 className="text-3xl md:text-4xl font-extrabold font-doto text-[var(--text-heading)]">Skills</h3>
-            <div className="mt-6 space-y-5">
+
+            <div className="mt-6 space-y-4">
               {focusAreas.map((area) => (
                 <div key={area.label}>
-                  <p className="mb-2 text-sm font-bold text-[var(--text-secondary)]">{area.label}</p>
+                  <p className="mb-2 text-sm md:text-base font-semibold text-[var(--text-secondary)]">{area.label}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {Array.from({ length: 20 }, (_, index) => (
-                      <span key={index} className={`h-2.5 w-2.5 rounded-[4px] border ${index < area.filled ? "border-[#059669] bg-[#10b981]" : "border-[var(--site-border-strong)] bg-[var(--site-card-bg-strong)]"}`} />
+                      <span
+                        key={index}
+                        className={`h-3 w-3 rounded-[4px] border ${index < area.filled ? "border-[#10b981] bg-[#10b981]" : "border-[var(--site-border-strong)] bg-[var(--site-surface-soft)]"}`}
+                      />
                     ))}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-7 grid grid-cols-5 gap-2.5 md:gap-3">
-              {coreStack.map((tech) => (
-                <div key={tech.name} title={tech.name} className="group aspect-square grid place-items-center rounded-xl border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] p-2.5 shadow-sm transition-transform hover:-translate-y-1">
-                  <img src={tech.icon} alt={tech.name} loading="lazy" className="h-7 w-7 md:h-8 md:w-8 object-contain group-hover:scale-110 transition-transform" />
+            <div className="mt-7 grid grid-cols-5 gap-3">
+              {coreStack.map((tool) => (
+                <div key={tool.name} title={tool.name} className="aspect-square rounded-xl border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] grid place-items-center p-2.5 hover:-translate-y-0.5 transition-transform">
+                  <img src={tool.icon} alt={tool.name} className="h-7 w-7 object-contain" loading="lazy" />
                 </div>
               ))}
             </div>
           </motion.article>
         </div>
-
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-          <article className="rounded-[2.4rem] border border-[var(--site-border)] bg-[var(--site-card-bg)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.05)]">
-            <p className="text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981]">Education</p>
-            <h3 className="mt-4 text-2xl md:text-3xl font-black text-[var(--text-heading)]">RV University</h3>
-            <p className="mt-2 text-base font-bold text-[var(--text-secondary)]">B.Tech (Hons) Computer Science & Engineering — AI & ML</p>
-            <div className="mt-5 flex flex-wrap gap-2"><span className="rounded-full px-3 py-1.5 text-xs font-bold border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] text-[#10b981]">2023 – 2027</span><span className="rounded-full px-3 py-1.5 text-xs font-bold border border-[var(--site-border)] bg-[var(--site-card-bg-strong)] text-[#10b981]">Bengaluru</span></div>
-          </article>
-          <article className="rounded-[2.4rem] border border-[#10b981]/20 bg-[var(--site-card-bg-accent)] backdrop-blur-xl p-7 md:p-9 shadow-[0_20px_56px_rgba(16,185,129,0.06)]">
-            <p className="text-[11px] tracking-[0.16em] uppercase font-bold text-[#10b981]">Selected Achievement</p>
-            <h3 className="mt-4 text-2xl md:text-3xl font-black text-[var(--text-heading)]">Karnataka Elevate 2025 Finalist</h3>
-            <p className="mt-3 text-sm md:text-base leading-relaxed font-medium text-[var(--text-secondary)]">Presented Socio Drift through Mew Thetis as an AI-powered music-generation startup project.</p>
-          </article>
-        </motion.div>
       </div>
     </section>
   );
