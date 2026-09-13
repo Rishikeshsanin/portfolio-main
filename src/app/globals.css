@@ -76,10 +76,19 @@ body{margin:0;background:var(--site-background);color:var(--site-foreground);fon
 *,*::before,*::after{box-sizing:border-box;transition-property:background-color,color,border-color,box-shadow;transition-duration:250ms;transition-timing-function:ease}
 a,button,[role="button"]{cursor:url('/cursor/cursor-tri-21.png') 1 1,pointer}
 *{scrollbar-width:thin;scrollbar-color:#10b981 var(--site-scroll-track)}
-*::-webkit-scrollbar{width:10px;height:10px}*::-webkit-scrollbar-track{background:var(--site-scroll-track)}*::-webkit-scrollbar-thumb{background:var(--site-scroll-thumb);border:2px solid var(--site-scroll-track);border-radius:999px}*::-webkit-scrollbar-thumb:hover{background:var(--site-scroll-thumb-hover)}
+*::-webkit-scrollbar{width:12px;height:12px}
+*::-webkit-scrollbar-track{background:var(--site-scroll-track);border-radius:999px}
+*::-webkit-scrollbar-thumb{background:var(--site-scroll-thumb);border:2px solid var(--site-scroll-track);border-radius:999px}
+*::-webkit-scrollbar-thumb:hover{background:var(--site-scroll-thumb-hover)}
+
 .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
-.font-doto{font-family:var(--font-doto),'Plus Jakarta Sans',sans-serif}.rubber-spin-dot{display:inline-block;transform-origin:50% 50%;animation:rubber-spin 3.4s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform}
+.font-doto{font-family:var(--font-doto),'Plus Jakarta Sans',sans-serif}
+.rubber-spin-dot{display:inline-block;transform-origin:50% 50%;animation:rubber-spin 3.4s cubic-bezier(.22,.61,.36,1) infinite;will-change:transform}
 .site-search-highlight{background:var(--site-highlight);border-radius:.18rem;padding:0 .08rem}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.no-scrollbar::-webkit-scrollbar{display:none}
+
+.home-pixel-field{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:layout paint;transform:translateZ(0);background:var(--site-background)}
+.home-pixel-field::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(84% 62% at 50% 56%,rgba(16,185,129,.005) 0%,rgba(16,185,129,.01) 42%,rgba(16,185,129,.04) 72%,rgba(16,185,129,.07) 100%)}
 
 .friend-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:var(--site-background)}
 .friend-bg::before,.friend-bg::after{content:"";position:absolute;border-radius:999px;filter:blur(70px);opacity:.65;will-change:transform}
