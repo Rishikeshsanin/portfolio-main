@@ -10,5 +10,9 @@ export default function RoutePixelBackground() {
     return null;
   }
 
-  return <HomeBackground quality="lite" />;
+  return (
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      <HomeBackground quality="lite" />
+    </div>
+  );
 }
