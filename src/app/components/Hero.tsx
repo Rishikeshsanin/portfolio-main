@@ -60,7 +60,12 @@ export default function Hero() {
 
   return (
     <section id="hero" className="w-full relative flex items-center justify-center px-6 md:px-12 pt-28 pb-10 md:pt-14 md:py-14 min-h-[70vh] md:min-h-0 scroll-mt-28">
-      <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="hidden lg:block absolute left-1 -bottom-10 z-20">
+      <motion.div
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="hidden lg:block fixed left-8 bottom-[clamp(8.75rem,18vh,11rem)] z-20"
+      >
         <motion.div whileHover={{ scale: 1.01 }} className="bg-white/5 backdrop-blur-xl scale-85 rounded-2xl border border-white/10 p-6 shadow-[0_12px_32px_rgba(16,185,129,0.12)] hover:shadow-[0_16px_40px_rgba(16,185,129,0.2)] transition-all duration-200">
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, i) => (
